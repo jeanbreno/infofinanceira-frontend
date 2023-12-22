@@ -17,9 +17,9 @@ function Navbar(props){
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav">
                 <NavbarItem render={props.isUsuarioAutenticado} href="/home" label="Home" />
-                <NavbarItem render={props.isUsuarioAutenticado} href="/cadastroUsuarios" label="Cadastrar Usuário" />
                 <NavbarItem render={props.isUsuarioAutenticado} href="/consultaLancamentos" label="Cadastrar Lançamentos" />
                 <NavbarItem render={props.isUsuarioAutenticado} href="https://infinanceira.blogspot.com/" target="_blank" label="Blog"/>
+                <NavbarItem render={props.isUsuarioAutenticado} href="/perfil" label="Meu Perfil" />
                 <NavbarItem render={props.isUsuarioAutenticado} onClick={props.deslogar} className="navBarSair" href="/login" label="Sair" />
             </ul>
             </div>

@@ -8,8 +8,6 @@ import LancamentosTable from './lancamentosTable'
 import LancamentoService from '../../app/service/lancamentoService'
 import localStorageService from '../../app/service/localStorageService'
 
-import { Timeline } from "react-ts-tradingview-widgets";
-
 import * as messages from '../../components/toastr'
 
 import {Dialog} from 'primereact/dialog';
@@ -58,6 +56,7 @@ class ConsultaLancamentos extends React.Component {
                 if(lista.length < 1){
                     messages.mensagemAlert("Nenhum resultado encontrado.");
                 }
+                
                 this.setState({ lancamentos: lista })
             }).catch( error => {
                 console.log(error)
@@ -175,7 +174,7 @@ class ConsultaLancamentos extends React.Component {
                         
                     </div>
                     <div>
-                        <Timeline colorTheme="dark" feedMode="market" market="crypto" height={400} width="auto" ></Timeline>
+                        
                     </div>
                 </div>   
                 <br/ >
@@ -201,7 +200,6 @@ class ConsultaLancamentos extends React.Component {
                     </Dialog>
                 </div>           
             </Card>
-
         )
     }
 }

@@ -2,7 +2,8 @@ import React from 'react'
 
 import Login from '../views/login'
 import Home from '../views/home'
-import CadastroUsuario from '../views/cadastroUsuario'
+import CadastroUsuario from '../views/usuarios/cadastroUsuario'
+import Perfil from '../views/usuarios/perfil'
 import ConsultaLancamentos from '../views/lancamentos/consultaLancamentos'
 import CadastroLancamentos from '../views/lancamentos/cadastroLancamentos'
 import LandingPage from '../views/landingPage'
@@ -32,11 +33,12 @@ function Rotas(props){
             <Switch>
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/login" component={Login} />
-                <Route exact path="/cadastroUsuarios" component={CadastroUsuario} />
+                <Route exact path="/cadastroUsuario/:id?" component={CadastroUsuario} />
                 
                 <RotaAutenticada isUsuarioAutenticado={props.isUsuarioAutenticado} path="/home" component={Home} />
                 <RotaAutenticada isUsuarioAutenticado={props.isUsuarioAutenticado} path="/consultaLancamentos" component={ConsultaLancamentos} />
                 <RotaAutenticada isUsuarioAutenticado={props.isUsuarioAutenticado} path="/cadastroLancamentos/:id?" component={CadastroLancamentos} />
+                <RotaAutenticada isUsuarioAutenticado={props.isUsuarioAutenticado} path="/perfil:id?" component={Perfil} />
             </Switch>
         </BrowserRouter>
     )

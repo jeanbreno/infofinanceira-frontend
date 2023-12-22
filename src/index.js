@@ -1,10 +1,3 @@
-/*import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './main/App';
-
-ReactDOM.render(<App />, document.getElementById('root'));
-*/
-
 import React from 'react';
 import App from './main/App';
 import { createRoot } from 'react-dom/client';

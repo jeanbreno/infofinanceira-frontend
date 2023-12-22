@@ -58,8 +58,7 @@ class CadastroLancamentos extends React.Component {
             return false;
         }     
 
-        this.service
-            .salvar(lancamento)
+        this.service.salvar(lancamento)
             .then(response => {
                 this.props.history.push('/consultaLancamentos')
                 messages.mensagemSucesso('Lançamento cadastrado com sucesso!')
