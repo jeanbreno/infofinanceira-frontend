@@ -7,7 +7,7 @@ import ProvedorAutenticacao from './provedorAutenticacao'
 import 'toastr/build/toastr.min'
 
 import 'bootswatch/dist/slate/bootstrap.css'
-//import '../custom.css'
+import '../custom.css'
 import 'toastr/build/toastr.css'
 
 import 'primereact/resources/themes/nova-light/theme.css';
